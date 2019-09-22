@@ -1,0 +1,26 @@
+
+<div class="overlay">
+  <div class="container">
+  <h1>Quotes</h1>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngFor='let quote of quotes;let i=index' class="card">
+        <div class="card-body">
+        <h4 class="card-title"><button (click)='displayInfo(i)' class="btn btn-info btn-sm" id="quotes-button" >See More</button></h4>
+          <p class="card-text">{{quote.quotename}}</p>
+        </div>
+        <span class="card-subtitle mb-2">Posted by: <span id="name">{{quote.user}}</span><span id="date"><span id="datecolor">{{quote.datePosted|date}}</span></span></span>
+         <div>
+           <app-quote-details  [quote]='quote' (isRead)='quoteDelete($event,i)'></app-quote-details>
+       </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+     <app-quote-form (addNew)="addNewQuote($event)"></app-quote-form>
+    </div>
+
+</div>
+</div>
+
+</div>
