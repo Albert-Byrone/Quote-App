@@ -6,6 +6,8 @@ This is a simple Angular  application that allows you to create quotes,upvote, d
 
 ## Live Page 
 
+https://albert-byrone.github.io/Quote-App/
+
 ## User
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
 
